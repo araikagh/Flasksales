@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Каталог — Arishop</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Arishop</div>
+    <div class="user">Привет, <b>{{ customer_name }}</b></div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="controls">
+      <div class="stats" id="stats"></div>
+
+      <div class="search-row">
+        <input id="search-input" placeholder="Поиск товара..." />
+        <button id="search-btn" class="btn btn-primary">Найти</button>
+        <button id="reset-btn" class="btn btn-ghost">Сброс</button>
+      </div>
+
+      <div id="categories" class="categories-row"></div>
+    </section>
+
+    <section id="products-grid" class="products-grid"></section>
+  </main>
+
+<script src="/static/js/catalog.js"></script>
+</body>
+</html>

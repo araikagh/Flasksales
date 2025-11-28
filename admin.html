@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Arishop</title>
+<link href="https://unpkg.com/tabulator-tables@5.4.4/dist/css/tabulator_midnight.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+<header class="topbar">
+  <div class="brand">Arishop — Admin</div>
+  <div><a href="/" class="btn btn-ghost">На сайт</a></div>
+</header>
+
+<main class="page-wrap">
+  <div id="admin-stats" class="stats"></div>
+
+  <div class="admin-controls">
+    <button data-table="products" class="btn btn-primary">Products</button>
+    <button data-table="customers" class="btn btn-primary">Customers</button>
+    <button data-table="orders" class="btn btn-primary">Orders</button>
+    <button data-table="categories" class="btn btn-primary">Categories</button>
+  </div>
+
+  <div id="table-holder" style="margin-top:18px;"></div>
+</main>
+
+<script src="https://unpkg.com/tabulator-tables@5.4.4/dist/js/tabulator.min.js"></script>
+<script src="/static/js/admin.js"></script>
+</body>
+</html>

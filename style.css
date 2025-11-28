@@ -1,0 +1,49 @@
+:root{
+  --bg1:#4b2bd9;
+  --bg2:#a67bff;
+  --accent:#8d4efc;
+  --muted:#f3e8ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#fff;
+  min-height:100vh;
+}
+.page-wrap{max-width:1200px;margin:28px auto;padding:18px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.brand{font-weight:700;font-size:1.4rem}
+.btn{padding:8px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#b58fff);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.btn-ghost{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.08)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03));border-radius:14px;padding:18px}
+.welcome{text-align:center;padding:34px}
+.roles{display:flex;gap:12px;justify-content:center;margin-top:18px}
+.login-card{max-width:420px;margin:40px auto}
+.login-card input{width:100%;padding:10px;border-radius:10px;border:0;margin:8px 0}
+.actions{display:flex;gap:12px;justify-content:flex-end}
+.msg.err{background:#ffdddd;color:#660000;padding:8px;border-radius:8px;margin:6px 0;color:#330000}
+
+.controls{display:flex;flex-direction:column;gap:14px;margin-bottom:18px}
+.search-row{display:flex;gap:10px;align-items:center}
+.search-row input{flex:1;padding:10px;border-radius:10px;border:0}
+.categories-row{display:flex;gap:8px;flex-wrap:wrap}
+.category-btn{padding:8px 10px;border-radius:999px;border:0;background:rgba(255,255,255,0.08);color:#fff;cursor:pointer}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:16px}
+.product-card{background:#fff;color:#222;border-radius:16px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:8px}
+.product-card h3{margin:0;font-size:1rem}
+.product-card .meta{font-size:0.9rem;color:#666}
+.product-card input[type="number"]{width:80px;padding:8px;border-radius:8px;border:1px solid #ddd}
+.product-card .buy{margin-top:auto;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.product-card .buy .price{font-weight:700;color:var(--accent)}
+
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat-card{background:rgba(255,255,255,0.06);padding:12px;border-radius:12px;min-width:140px;text-align:center}
+
+.admin-controls{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Tabulator tweaks */
+.tabulator{background:transparent}
+.tabulator .tabulator-header{background:transparent}

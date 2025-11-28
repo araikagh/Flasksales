@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Вход</title>
+<link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+<main class="page-wrap">
+  <div class="card login-card">
+    <h2>Вход</h2>
+    {% if error %}<div class="msg err">{{ error }}</div>{% endif %}
+    <form method="post" action="/login">
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" name="role" value="customer" type="submit">Я покупатель</button>
+        <button class="btn btn-ghost" name="role" value="admin" type="submit">Я работник / админ</button>
+      </div>
+    </form>
+
+    {% if role == "customer" %}
+    <hr/>
+    <form method="post" action="/login/customer">
+      <label>Введите имя</label>
+      <input name="customer_name" placeholder="Ваше имя" required />
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Войти как покупатель</button>
+      </div>
+    </form>
+    {% elif role == "admin" %}
+    <hr/>
+    <form method="post" action="/login/admin">
+      <label>Пароль администратора</label>
+      <input name="admin_password" type="password" placeholder="Пароль" required />
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Войти как админ</button>
+      </div>
+    </form>
+    {% endif %}
+  </div>
+</main>
+</body>
+</html>
